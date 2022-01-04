@@ -2,21 +2,18 @@ root {
   --white: #fff;
   --black: #000;
 
-  /* Primary colors*/
   --primary-1: #2b8379;
   --primary-2: #19a596;
   --primary-3: #7fd1c7;
   --primary-4: #7fd1c7;
   --primary-5: #d0f3ef;
 
-  /* Neutral colors */
   --neutral-1: #2c2c2c;
   --neutral-2: #434343;
   --neutral-3: #94868b;
   --neutral-4: #d9cfd3;
   --neutral-5: #f2ecee;
 
-  /* Accent-blue colors */
   --accent-1: #970e3d;
   --accent-2: #c43464;
   --accent-3: #de7699;
@@ -68,7 +65,6 @@ a:hover {
   padding: 0 20px;
 }
 
-/* FORMS */
 .form h2 {
   font-size: 24px;
   font-weight: 400;
@@ -119,7 +115,6 @@ input:not(.btn):focus {
   border-left: 7px solid var(--primary-1);
 }
 
-/* NAVBAR */
 .navbar {
   background-color: white;
   padding: 10px;
