@@ -11,3 +11,10 @@ const render = (items, itemsCount) => {
     .map((todo) => `<li>${todo.title} [${todo.category}]</li>`)
     .join("");
 };
+const todos = new Todos();
+
+try {
+  render(todos.getAll(), todos.getCount());
+} catch (error) {
+  console.error(error);
+}
