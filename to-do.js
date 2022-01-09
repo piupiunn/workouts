@@ -37,3 +37,7 @@ filter.addEventListener("change", () => {
         console.error(error);
     }
 });
+constructor() {  
+  this.todos = [{
+      title: "Learn JavaScript",
+      category: "work"
