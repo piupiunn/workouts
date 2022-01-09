@@ -40,4 +40,9 @@ filter.addEventListener("change", () => {
 constructor() {  
   this.todos = [{
       title: "Learn JavaScript",
-      category: "work"
+    category: "work"
+  }, {
+    title: "Meditate",
+    category: "personal"
+}];
+}
