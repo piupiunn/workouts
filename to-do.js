@@ -18,31 +18,30 @@ try {
 } catch (error) {
   console.error(error);
 }
-title.value = "";
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  try {
+    todos.add(title.value, category.value);
+    render(todos.getAll(), todos.getCount());
+  } catch (error) {
+    console.error(error);
+  }
+  title.value = "";
 });
 
 filter.addEventListener("change", () => {
-    try {
-        if (filter.value === "work") {
-            // filter work
-            render(todos.getWork(), todos.getWorkCount());
-        } else if (filter.value === "personal") {
-            // filter personal
-            render(todos.getPersonal(), todos.getPersonalCount());
-        } else {
-            // show all
-            render(todos.getAll(), todos.getCount());
-        }
-    } catch (error) {
-        console.error(error);
+  try {
+    if (filter.value === "work") {
+      // filter work
+      render(todos.getWork(), todos.getWorkCount());
+    } else if (filter.value === "personal") {
+      // filter personal
+      render(todos.getPersonal(), todos.getPersonalCount());
+    } else {
+      // show all
+      render(todos.getAll(), todos.getCount());
     }
+  } catch (error) {
+    console.error(error);
+  }
 });
-constructor() {  
-  this.todos = [{
-      title: "Learn JavaScript",
-    category: "work"
-  }, {
-    title: "Meditate",
-    category: "personal"
-}];
-}
