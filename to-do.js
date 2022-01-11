@@ -1,3 +1,4 @@
+import Todos from "./todos.js";
 const form = document.querySelector("#todo-form");
 const title = document.querySelector("#todo-title");
 const category = document.querySelector("#todo-category");
