@@ -188,3 +188,71 @@ input:not(.btn):focus {
   outline: none;
   border-left: 7px solid var(--accent-1);
 }
+
+.nav-tabs {
+  position: relative;
+  margin: 0 0 40px 0;
+}
+
+.nav-tabs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+}
+
+.nav-tabs li {
+  display: inline-block;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: var(--black);
+  margin-right: 20px;
+}
+.nav-tabs a#onlink {
+  border-bottom: 7px solid var(--accent-1);
+}
+
+.border-tabs {
+  position: absolute;
+  z-index: -1;
+  bottom: -3px;
+  border-bottom: var(--neutral-4) solid 1px;
+  min-width: 400px;
+}
+
+.tabs p {
+  max-width: 450px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 0 20px;
+}
+
+#footer-wrapper {
+  background-color: var(--neutral-5);
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+#footer-wrapper a {
+  text-decoration: none;
+}
+
+select {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+#todo-list {
+  line-height: 28px;
+  padding-left: 0;
+}
+
+.separator {
+  margin-bottom: 20px;
+}
