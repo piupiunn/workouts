@@ -1,0 +1,18 @@
+#header {
+  height: 10%;
+  width: 100%;
+}
+.btn-primary {
+  width: 100px;
+  height: 40px;
+}
+.container-fluid {
+  gap: 500px;
+}
+
+.navbar-brand {
+  width: 50px;
+}
+#mynavbar {
+  gap: 50px;
+}
