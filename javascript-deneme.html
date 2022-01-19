@@ -6,27 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="javascript-deneme.css" />
-    </head>
+  </head>
   <body>
-  
-    <nav class="navbar">
-      <h1 class="nav-brand">Text ellipsis</h1>
-    </nav>
-    <main class="container">
-      <div>
-        <label class="label" for="component-name"
-          >Enter text<span class="input-required">*</span></label
-        >
+    <section id="ust-bar">
+      <nav class="navbar">
+        <h1 class="nav-brand">Text ellipsis</h1>
+      </nav>
+      <main class="container">
+        <div>
+          <label class="label" for="component-name"
+            >Enter text<span class="input-required">*</span></label
+          >
+          <input
+            type="text"
+            class="input"
+            placeholder="Enter your text here"
+            id="input"
+            autocomplete="off"
+          />
+        </div>
+        <p id="output"></p>
+      </main>
+    </section>
+    <section id="liste">
+      <div class="input-group mb-3">
+        <div class="input-group-text">
+          <input
+            class="form-check-input mt-0"
+            type="checkbox"
+            value=""
+            aria-label="Checkbox for following text input"
+          />
+        </div>
         <input
           type="text"
-          class="input"
-          placeholder="Enter your text here"
-          id="input"
-          autocomplete="off"
+          class="form-control"
+          aria-label="Text input with checkbox"
         />
       </div>
-      <p id="output"></p>
-    </main>
+    </section>
     <script type="text/javascript" src="javascript-deneme.js"></script>
   </body>
 </html>
