@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#gunler {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+#listeler {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.btn-group {
+  padding-left: 18px;
+}
+
+#exampleColorInput {
+  width: 25px;
+  height: 0px;
+}
+
+.form-control {
+  background-color: #cfe2ff;
+  border: 0px;
+}
+
+.input-group-text {
+  background-color: #cfe2ff;
+  border: 0px;
+}
+
+.succes_background_class {
+  background-color: #d1e7dd;
+  border: 0px;
+}
+
+.danger_background_class {
+  background-color: #f8d7da;
+  border: 0px;
+}
+.warning_background_class {
+  background-color: #fff3cd;
+  border: 0px;
+}
+.info_background_class {
+  background-color: #cff4fc;
+  border: 0px;
+}
+
+.dark_background_class {
+  background-color: #d3d3d4;
+  border: 0px;
+}
+
+.light_background_class {
+  background-color: #fefefe;
+  border: 0px;
+}
+.primary_background_class {
+  background-color: #cfe2ff;
+  border: 0px;
+}
+.secondary_background_class {
+  background-color: #e2e3e5;
+  border: 0px;
+}
+
+#yazı-kutusugenel {
+  width: 50%;
+  height: 10%;
+}
