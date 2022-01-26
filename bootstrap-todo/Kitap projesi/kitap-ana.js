@@ -24,7 +24,7 @@ function addKitap(e) {
   const yayinci = yayinciElement.value;
 
   if (title === "" || yazar === "" || url === "" || yayinci === "") {
-    //Hata mesajı
+    ui.displayMessages("danger", "Tüm alanları doldurun");
   } else {
     const newKitap = new Kitap(title, yazar, url, yayinci); // Öncdeden oluşturduğumuz kitap constructorunu kullanarak newKitap adlı yeni bir obje oluşturduk
 
