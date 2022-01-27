@@ -1,7 +1,9 @@
-function Kitap(title, yazar, url, yayinci) {
-  ///Kitap constructoru oluşturduk.
-  this.title = title;
-  this.yazar = yazar;
-  this.url = url;
-  this.yayinci = yayinci;
+class Book {
+  constructor(title, author, url, publisher) {
+    ///Kitap constructoru oluşturduk.
+    this.title = title;
+    this.author = author;
+    this.url = url;
+    this.publisher = publisher;
+  }
 }

@@ -72,7 +72,7 @@ function deleteTodo(e) {
   if (e.target.className === "fa fa-remove") {
     //Tıklanan yerin classı "fa fa-remove" mu kontrol ediyoruz.
     e.target.parentElement.parentElement.remove(); //Tıklanın yerin(e.targetin ki buda "fa fa-remove" classı) iki üst parentine ulaşarak <li> elemanını elde ettik ve bunun kaldırılmasını sağladık.
-    deleteFromStorage(e.target.parentElement.parentElement.textContent); //deleteFromStorage fonksiyonuna silinmesi için tıklanan <li> elementinin içeriğini deleteFromStorage fonksiyonumuza yolluyoruz.
+    deleteFromStorage(e.target.parentElement.parentElement.textContent); //Silinmesi için tıklanan <li> elementinin içeriğini deleteFromStorage fonksiyonumuza yolluyoruz.
     showAlert("success", "Todo başarıyla silindi"); //Alert gösterdik
   }
 }
@@ -83,7 +83,7 @@ function deleteFromStorage(deletetodo) {
   todos.forEach(function (todo, index) {
     //Storagedan bilgiler geldikten sonra eğer todo ve deletetodo aynıysa splice metoduyla silinmesini istedik.
     if (todo === deletetodo) {
-      todos.splice(index, 1);
+      todos.splice(index, 1); // splice medotuyla objede bulunan silinmesi gereken içeriğimizi seçiyoruz.
     }
   });
 
