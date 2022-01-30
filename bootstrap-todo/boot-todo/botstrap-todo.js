@@ -168,7 +168,8 @@ function addTodoToUI(newTodo) {
   //   </li> -->
 
   const listItem = document.createElement("li"); //List Itemi <li> şeklinde oluşturduk ve özelliklerini ekledik.
-  listItem.className = "list-group-item "; //Li ye class ismini verdik.
+  listItem.className =
+    "list-group-item list-group-item-action list-group-item-light "; //Li ye class ismini verdik.
 
   const buton = document.createElement("button");
   buton.className = "btn btn-outline-success float-start m-2 btn-sm";
