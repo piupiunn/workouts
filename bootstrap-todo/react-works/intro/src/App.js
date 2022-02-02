@@ -7,6 +7,8 @@ import { Col, Container, Row } from "reactstrap";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import CartList from "./CartList";
+import FromDemo1 from "./FromDemo1";
+import FromDemo2 from "./FromDemo2";
 
 export default class App extends Component {
   state = { currentCategory: "", products: [], cart: [] };
@@ -44,6 +46,7 @@ export default class App extends Component {
   removeFromCart = (product) => {
     let newCart = this.state.cart.filter((c) => c.product.id !== product.id);
     this.setState({ cart: newCart });
+    alertify.error(product.productName + "Removed from Cart");
   };
 
   render() {
@@ -67,16 +70,32 @@ export default class App extends Component {
             </Col>
             <Col xs="9">
               <Routes>
-                <Route exact path="/" component={NotFound}></Route>
-                <Route exact path="/cart" component={CartList}></Route>
+                <Route
+                  exact
+                  path="/"
+                  element={
+                    <ProductList
+                      addToCart={this.addToCart}
+                      products={this.state.products}
+                      currentCategory={this.state.currentCategory}
+                      info={productInfo}
+                    ></ProductList>
+                  }
+                ></Route>
+                <Route
+                  exact
+                  path="/cart"
+                  element={
+                    <CartList
+                      removeFromCart={this.removeFromCart}
+                      cart={this.state.cart}
+                    ></CartList>
+                  }
+                ></Route>
+                <Route path="/form1" element={<FromDemo1></FromDemo1>}></Route>
+                <Route path="/form2" element={<FromDemo2></FromDemo2>}></Route>
+                <Route element={<NotFound></NotFound>}></Route>
               </Routes>
-
-              <ProductList
-                addToCart={this.addToCart}
-                products={this.state.products}
-                currentCategory={this.state.currentCategory}
-                info={productInfo}
-              ></ProductList>
             </Col>
           </Row>
         </Container>
