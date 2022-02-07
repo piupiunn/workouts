@@ -1,4 +1,4 @@
-import React, { Component } from "react";
++import React, { Component } from "react";
 import alertify from "alertifyjs";
 import CategoryList from "./CategoryList";
 import Navigasyon from "./Navigasyon";
