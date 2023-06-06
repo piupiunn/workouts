@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/piupiunn/workouts/issues"
   },
-  "homepage": "https://github.com/piupiunn/workouts#readme"
+  "homepage": "https://github.com/piupiunn/workouts#readme",
+  "dependencies": {
+    "remixicon": "^2.5.0"
+  }
 }

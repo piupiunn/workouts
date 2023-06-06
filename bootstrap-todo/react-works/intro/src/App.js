@@ -1,4 +1,4 @@
-+import React, { Component } from "react";
+import React, { Component } from "react";
 import alertify from "alertifyjs";
 import CategoryList from "./CategoryList";
 import Navigasyon from "./Navigasyon";
@@ -49,22 +49,26 @@ export default class App extends Component {
     alertify.error(product.productName + "Removed from Cart");
   };
 
-  render() {
+  render({
+    removeFromCart,
+    cart,
+    currentCategory,
+    changeCategory,
+    addToCart,
+    products,
+  }) {
     let productInfo = { title: "Product List" };
     let categoryInfo = { title: "Category List" };
     return (
       <div>
         <Container>
-          <Navigasyon
-            removeFromCart={this.removeFromCart}
-            cart={this.state.cart}
-          ></Navigasyon>
+          <Navigasyon removeFromCart={removeFromCart} cart={cart}></Navigasyon>
 
           <Row>
             <Col xs="3">
               <CategoryList
-                currentCategory={this.state.currentCategory}
-                changeCategory={this.changeCategory}
+                currentCategory={currentCategory}
+                changeCategory={changeCategory}
                 info={categoryInfo}
               ></CategoryList>
             </Col>
@@ -75,9 +79,9 @@ export default class App extends Component {
                   path="/"
                   element={
                     <ProductList
-                      addToCart={this.addToCart}
-                      products={this.state.products}
-                      currentCategory={this.state.currentCategory}
+                      addToCart={addToCart}
+                      products={products}
+                      currentCategory={currentCategory}
                       info={productInfo}
                     ></ProductList>
                   }
@@ -87,8 +91,8 @@ export default class App extends Component {
                   path="/cart"
                   element={
                     <CartList
-                      removeFromCart={this.removeFromCart}
-                      cart={this.state.cart}
+                      removeFromCart={removeFromCart}
+                      cart={cart}
                     ></CartList>
                   }
                 ></Route>

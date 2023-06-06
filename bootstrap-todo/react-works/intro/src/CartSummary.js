@@ -11,18 +11,18 @@ import {
 import { Link } from "react-router-dom";
 
 export default class CartSummary extends Component {
-  renderSummary() {
+  renderSummary({ cart, removeFromCart }) {
     return (
       <UncontrolledDropdown inNavbar nav>
         <DropdownToggle caret nav>
           Your Cart - {this.props.cart.length}
         </DropdownToggle>
         <DropdownMenu right>
-          {this.props.cart.map((cartItem) => (
+          {cart.map((cartItem) => (
             <DropdownItem key={cartItem.product.id}>
               <Badge
                 color="danger"
-                onClick={() => this.props.removeFromCart(cartItem.product)}
+                onClick={() => removeFromCart(cartItem.product)}
               >
                 x
               </Badge>
@@ -46,12 +46,10 @@ export default class CartSummary extends Component {
       </NavItem>
     );
   }
-  render() {
+  render({ cart }) {
     return (
       <div>
-        {this.props.cart.length > 0
-          ? this.renderSummary()
-          : this.renderEmptyCart()}
+        {cart.length > 0 ? this.renderSummary() : this.renderEmptyCart()}
       </div>
     );
   }

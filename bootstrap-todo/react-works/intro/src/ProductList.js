@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
 
 export default class ProductList extends Component {
-  render() {
+  render({ info, currentCategory, products, addToCart }) {
     return (
       <div>
         <h3>
-          {this.props.info.title}-{this.props.currentCategory}
+          {info.title}-{currentCategory}
         </h3>
         <Table striped bordered hover>
           <thead>
@@ -20,7 +20,7 @@ export default class ProductList extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.products.map((product) => (
+            {products.map((product) => (
               <tr key={product.id}>
                 <td>{product.id}</td>
                 <td>{product.productName}</td>
@@ -28,10 +28,7 @@ export default class ProductList extends Component {
                 <td>{product.unitPrice}</td>
                 <td>{product.unitsInStock}</td>
                 <td>
-                  <Button
-                    onClick={() => this.props.addToCart(product)}
-                    variant="info"
-                  >
+                  <Button onClick={() => addToCart(product)} variant="info">
                     Add
                   </Button>
                 </td>

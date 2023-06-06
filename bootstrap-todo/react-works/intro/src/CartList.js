@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
 
 export default class CartList extends Component {
-  renderCart() {
+  renderCart({ removeFromCart }) {
     return (
       <Table striped>
         <thead>
@@ -28,7 +28,7 @@ export default class CartList extends Component {
               <td>
                 <Button
                   color="danger"
-                  onClick={() => this.props.removeFromCart(cartItem.product)}
+                  onClick={() => removeFromCart(cartItem.product)}
                 >
                   Remove
                 </Button>
@@ -40,7 +40,7 @@ export default class CartList extends Component {
     );
   }
 
-  render() {
-    return <div>{this.renderCart()}</div>;
+  render({ renderCart }) {
+    return <div>{renderCart()}</div>;
   }
 }

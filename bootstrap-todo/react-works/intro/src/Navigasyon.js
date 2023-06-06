@@ -13,7 +13,7 @@ import CartSummary from "./CartSummary";
 import { Link } from "react-router-dom";
 
 export default class Navigasyon extends Component {
-  render() {
+  render({ removeFromCart, cart }) {
     return (
       <div>
         <Navbar color="light" expand="md" light>
@@ -37,8 +37,8 @@ export default class Navigasyon extends Component {
                 </NavLink>
               </NavItem>
               <CartSummary
-                removeFromCart={this.props.removeFromCart}
-                cart={this.props.cart}
+                removeFromCart={removeFromCart}
+                cart={cart}
               ></CartSummary>
             </Nav>
             <NavbarText>Simple Text</NavbarText>
